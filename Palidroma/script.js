@@ -22,8 +22,17 @@ function isWord(string) {
     }
     // Confronto la parola originale con quella invertita
     return lowercaseWord === reverseWord;
-    
-
 }
 
+// Inizio la verifica del risultato e lo stampo
+if(isWord(insertWord)){
+    console.log(`${insertWord} è una parola palindroma!`);
+} else{
+    console.log(`${insertWord} non è una parola palindroma!`)
+
+};
+
+// Verifico con un valore booleano
 const word = isWord(insertWord);
+console.log(`Risultato : ${word}`);
+
