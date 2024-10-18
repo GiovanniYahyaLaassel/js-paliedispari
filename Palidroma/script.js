@@ -5,13 +5,25 @@
 
 // Chiedo all'utente di inserire una parola
 const insertWord = prompt('Inserisci una parola per verificare se è palindorma:');
+// console.log(insertWord);
+
 
 //Creo una funzione che determina se l'utente inserirà una parola palindroma
 function isWord(string) {
     //converto la parola in minuscolo per evitare di avere problemi con min. e maiusc.
-    let lowercaseWord = insertWord.lowercaseWord();
+    let lowercaseWord = insertWord.toLowerCase();
 
+    // inverto la parola
+    let reverseWord = '';
+    // Inverto il ciclo for in modo da poter partire dall'ultima lettera e procedere all'indietro (soluzione trovata cercando su internet).
+    for (let i = lowercaseWord.length -1 ; i >= 0; i--) {
+        reverseWord += lowercaseWord[i];
+        // console.log(reverseWord);
+    }
+    // Confronto la parola originale con quella invertita
+    return lowercaseWord === reverseWord;
+    
 
 }
 
-const word = isWord(stringResult);
+const word = isWord(insertWord);
