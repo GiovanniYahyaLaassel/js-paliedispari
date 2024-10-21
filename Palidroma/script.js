@@ -9,7 +9,7 @@ const insertWord = prompt('Inserisci una parola per verificare se è palindorma:
 
 
 //Creo una funzione che determina se l'utente inserirà una parola palindroma
-function isWord(string) {
+function isPalindrome(string) {
     //converto la parola in minuscolo per evitare di avere problemi con min. e maiusc.
     let lowercaseWord = insertWord.toLowerCase();
 
@@ -25,7 +25,7 @@ function isWord(string) {
 }
 
 // Inizio la verifica del risultato e lo stampo
-if(isWord(insertWord)){
+if(isPalindrome(insertWord)){
     console.log(`${insertWord} è una parola palindroma!`);
 } else{
     console.log(`${insertWord} non è una parola palindroma!`)
@@ -33,6 +33,6 @@ if(isWord(insertWord)){
 };
 
 // Verifico con un valore booleano
-const word = isWord(insertWord);
+const word = isPalindrome(insertWord);
 console.log(`Risultato : ${word}`);
 
